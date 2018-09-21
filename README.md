@@ -1,2 +1,2 @@
 # OneAppp
-ReactNative Weex H5 in one app
+ReactNative Weex Flutter H5 in one app
