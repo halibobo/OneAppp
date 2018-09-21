@@ -22,15 +22,7 @@ public class BaseReactActivity extends ReactActivity {
         super.onCreate(savedInstanceState);
     }
 
-    /**
-     * Returns the name of the main component registered from JavaScript.
-     * This is used to schedule rendering of the component.
-     * e.g. "MoviesApp"
-     */
-    protected @Nullable
-    String getMainComponentName() {
-        return "dahei";
-    }
+
 
     @Override
     protected ReactActivityDelegate createReactActivityDelegate() {

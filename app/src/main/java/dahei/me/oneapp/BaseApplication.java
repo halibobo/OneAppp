@@ -36,21 +36,17 @@ public class BaseApplication extends  Application implements ReactApplication {
             );
         }
 
-        @Override
-        protected String getJSMainModuleName() {
-            return "index";
-        }
 
-        @Nullable
-        @Override
-        protected String getJSBundleFile() {
-            return "ReactNative.bundle";
-        }
+//        @Nullable
+//        @Override
+//        protected String getJSBundleFile() {
+//            return "ReactNative.bundle";
+//        }
 
         @Nullable
         @Override
         protected String getBundleAssetName() {
-            return "ReactNative.bundle";
+            return "reactnative.bundle";
         }
     };
 
