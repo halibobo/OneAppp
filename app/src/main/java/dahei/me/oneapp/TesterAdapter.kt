@@ -25,6 +25,7 @@ class TesterAdapter( private val myDataSet: List<Test>) : RecyclerView.Adapter<T
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val textView = holder.textView.findViewById<TextView>(R.id.textTitle)
         textView.text = myDataSet[position].testName
+
         holder.textView.setOnClickListener {
             exeFun(
                     myDataSet[position]

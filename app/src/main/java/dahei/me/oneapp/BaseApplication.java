@@ -7,6 +7,8 @@ import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
 import com.facebook.soloader.SoLoader;
+import com.taobao.weex.InitConfig;
+import com.taobao.weex.WXSDKEngine;
 
 import java.util.Arrays;
 import java.util.List;
@@ -14,6 +16,7 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 import dahei.me.base.AppContext;
+import dahei.me.weex.extend.ImageAdapter;
 
 /**
  * created by yubosu
@@ -31,7 +34,7 @@ public class BaseApplication extends  Application implements ReactApplication {
 
         @Override
         protected List<ReactPackage> getPackages() {
-            return Arrays.<ReactPackage>asList(
+            return Arrays.asList(
                     new MainReactPackage()
             );
         }
@@ -61,6 +64,10 @@ public class BaseApplication extends  Application implements ReactApplication {
         super.onCreate();
         AppContext.init(getApplicationContext());
         SoLoader.init(this, /* native exopackage */ false);
+
+        WXSDKEngine.initialize(this,
+                new InitConfig.Builder().setImgAdapter(new ImageAdapter()).build()
+        );
     }
 
 }

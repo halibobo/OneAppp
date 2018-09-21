@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import dahei.me.base.Test
+import dahei.me.oneapp.weex.WeexTest
 import dahei.me.reactnative.ReactNativeTest
 
 /**
@@ -35,7 +36,8 @@ class MainActivity : AppCompatActivity() {
     private fun init() {
         viewManager = LinearLayoutManager(this)
         val data: List<Test> = arrayOf(
-               ReactNativeTest()).toList()
+               ReactNativeTest(),
+                WeexTest()).toList()
         val viewAdapter = TesterAdapter(data)
         recyclerView.apply {
             layoutManager = viewManager

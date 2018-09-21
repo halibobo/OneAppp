@@ -1,1 +1,1 @@
-include ':app', ':reactnative', ':base'
+include ':app', ':reactnative', ':base', ':weex'
